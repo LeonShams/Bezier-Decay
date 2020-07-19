@@ -1,1 +1,1 @@
-from curves import bezier_decay
+import curves.BezierCurve as bezier_decay
