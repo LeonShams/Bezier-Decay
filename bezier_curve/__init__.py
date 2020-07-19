@@ -1,1 +1,1 @@
-import .bezier_curve.BezierCurve as bezier_decay
+import .curves.BezierCurve as bezier_decay
