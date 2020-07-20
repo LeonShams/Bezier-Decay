@@ -25,7 +25,7 @@ class BezierCurve:
     if adaptive:
       if not start_x < final_x:
         raise ValueError("The starting x value must be less than the final x value when using adaptive mode.")
-      if not start_y < final_y:
+      if start_y < final_y:
         raise ValueError("The starting y value must be less than the final y value when using adaptive mode.")
       
       horizontal_shift = (start_x-default_start_x)/2 + (final_x-default_final_x)/2
