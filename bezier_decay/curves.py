@@ -4,10 +4,10 @@ import math
 
 default_start_x = 0
 default_start_y = 1
-default_x_1 = 0.216
-default_y_1 = 0.3
-default_x_2 = 0.335
-default_y_2 = 0.1
+default_x_1 = 0.3
+default_y_1 = 0.09
+default_x_2 = 0.07
+default_y_2 = 0.04
 default_final_x = 1
 default_final_y = 0.001
 
@@ -25,17 +25,22 @@ class BezierCurve:
                adaptive=True):
     
     if adaptive:
-      if not start_x < final_x:
-        raise ValueError("The starting x value must be less than the final x value when using adaptive mode.")
-      if start_y < final_y:
-        raise ValueError("The starting y value must be less than the final y value when using adaptive mode.")
+      horizontal_shift = start_x-default_start_x
+      horizontal_multiplier = (final_x - horizontal_shift)/default_final_x
       
-      horizontal_shift = (start_x-default_start_x)/2 + (final_x-default_final_x)/2
-      vertical_shift = (start_y-default_start_y)/2 + (final_y-default_final_y)/2
-      
-      self.x_0, self.y_0, self.x_1, self.y_1, self.x_2, self.y_2, self.x_3, self.y_3 = start_x, start_y, x_1+horizontal_shift, y_1+vertical_shift, x_2+horizontal_shift, y_2+vertical_shift, final_x, final_y
+      vertical_shift = start_y-default_start_y
+      vertical_multiplier = (final_y - vertical_shift)/default_final_y
     else:
-      self.x_0, self.y_0, self.x_1, self.y_1, self.x_2, self.y_2, self.x_3, self.y_3 = start_x, start_y, x_1, y_1, x_2, y_2, final_x, final_y
+      horizontal_shift = 0
+      horizontal_multiplier = 1
+      
+      vertical_shift = 0
+      vertical_multiplier = 1
+      
+  self.x_0, self.y_0 = start_x, start_y
+  self.x_1, self.y_1 = (x_1*horizontal_multiplier)+horizontal_shift, (y_1*vertical_multiplier)+vertical_shift
+  self.x_2, self.y_2 = (x_2*horizontal_multiplier)+horizontal_shift, (y_2*vertical_multiplier)+vertical_shift
+  self.x_3, self.y_3 = final_x, final_y
 
   # Does cube root in python
   def cube_root(self, val):
