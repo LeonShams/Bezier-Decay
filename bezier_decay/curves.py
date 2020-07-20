@@ -70,7 +70,7 @@ class BezierCurve:
   # Graphs the bezier curve
   def graph(self, start=0, stop=1, smoothing=1_000):
     x = np.linspace(start, stop, num=smoothing)
-    y = [get_y(i) for i in x]
+    y = [self.get_y(i) for i in x]
     
     plt.plot(x, y)
     plt.show()
