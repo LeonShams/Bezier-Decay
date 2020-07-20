@@ -6,5 +6,5 @@
 ---
 Copy and paste the following command into the shell
 ```
-pip install --upgrade git+https://github.com/schaall/snake.git
+pip install --upgrade git+https://github.com/schaall/Bezier-Decay.git
 ```
