@@ -22,7 +22,7 @@ class BezierCurve:
                y_2=default_y_2, 
                final_x=default_final_x, 
                final_y=default_final_y, 
-               adaptive=True):
+               adaptive=True, check_domain=True):
     
     if adaptive:
       horizontal_shift = start_x-default_start_x
@@ -41,6 +41,21 @@ class BezierCurve:
     self.x_1, self.y_1 = (x_1*horizontal_multiplier)+horizontal_shift, (y_1*vertical_multiplier)+vertical_shift
     self.x_2, self.y_2 = (x_2*horizontal_multiplier)+horizontal_shift, (y_2*vertical_multiplier)+vertical_shift
     self.x_3, self.y_3 = final_x, final_y
+    
+    if check_domain:
+      self.test()
+    
+  def test(self):
+    try:
+      self.get_y(self.x_0)
+      self.get_y(self.x_3)
+    except:
+      raise ValueError('''
+      The entered values will result in a domain error. 
+      Please change the entered x_1, y_1, x_2, or y_2 values to prevent an error. 
+      These points can be messed around with at https://www.desmos.com/calculator/cd99jvsggg to check for dmoain restrictions.
+      This error can be overridden by setting check_domain=False in the curve initialization, but this may result in an error during graphing or while y values are being retrieved.'''
+                      )
     
   # Does cube root in python
   def cube_root(self, val):
@@ -80,3 +95,8 @@ class BezierCurve:
     
     plt.plot(x, y)
     plt.show()
+
+  def __str__(self):
+    print(f"Follow https://www.desmos.com/calculator/cd99jvsggg to use an interactive graph")
+    
+    
