@@ -25,15 +25,16 @@ Then loop over the steps and feed them into the decay curve. The decay curve wil
 for step in range(total_steps+1):
  current_val = decay_curve(step)
 ```
+<br>
 
-If the default curve is not the desired curve it can be changed by modifying the x_1, y_1, x_2, and y_2 values.
+If the default curve is not the desired one it can be changed by modifying the x_1, y_1, x_2, and y_2 values.
 ```
 x_1 = 0.275
 y_1 = 0.1
 x_2 = 0.5
 y_2 = 0.001
 ```
-By default an adaptive mode is turned on which automatically scales the x_1 - y_2 values based on the staring x and ys and final x and ys. So if changes to the x_1 - y_2 values are undesired the this mode can be toggled off.
+By default an adaptive mode is turned on which automatically scales the x_1 - y_2 values based on the staring x and ys and final x and ys. So if automatic modification to the x_1 - y_2 values is undesired this mode can be toggled off.
 ```
 # Adaptive mode on implementation (given x_1 - y_2s above)
 steps = 1000
@@ -41,6 +42,7 @@ decay_curve = bezier_curve(x_1=x_1, y_1=y_1, x_2=x_2, y_2=y_2, final_x=steps)
 
 for step in range(steps+1):
  current_val = decay_curve(step)
+ 
  
 # Adaptive mode off implementation (given x_1 - y_2s above)
 steps = 1000
@@ -57,8 +59,9 @@ decay_curve = bezier_curve(x_1=x_1, y_1=y_1, x_2=x_2, y_2=y_2, final_x=steps)
 for step in range(steps+1):
  current_val = decay_curve(step/steps)
 ```
+<br>
 
-For an interactive curve visit https://www.desmos.com/calculator/cd99jvsggg. Once the desired curve has been created then input the values on the left side of the screen.
+For an interactive curve visit https://www.desmos.com/calculator/cd99jvsggg. Once the desired curve has been created then enter the values on the left side of the screen into the bezier curve.
 ```
 x_0 = 0 # Staring x
 y_0 = 1 # Staring y
@@ -69,5 +72,5 @@ y_2 = 0.001
 x_3 = 1 # Final x
 y_3 = 0.001 # Final y
 
-curve = bezier_curve(x_0, y_0, x_1, y_1, x_2, y_2, x_3, y_3, adaptive=False)
+decay_curve = bezier_curve(x_0, y_0, x_1, y_1, x_2, y_2, x_3, y_3, adaptive=False)
 ```
