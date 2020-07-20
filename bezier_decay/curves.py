@@ -97,6 +97,6 @@ class BezierCurve:
     plt.show()
 
   def __str__(self):
-    print(f"Follow https://www.desmos.com/calculator/m0xo4tt6kl to use an interactive graph")
+    return "Follow https://www.desmos.com/calculator/m0xo4tt6kl to use an interactive graph"
     
     
