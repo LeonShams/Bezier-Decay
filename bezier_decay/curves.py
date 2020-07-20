@@ -42,12 +42,12 @@ class BezierCurve:
     self.x_2, self.y_2 = (x_2*horizontal_multiplier)+horizontal_shift, (y_2*vertical_multiplier)+vertical_shift
     self.x_3, self.y_3 = final_x, final_y
     
-    # Does cube root in python
-    def cube_root(self, val):
-      if val >= 0:
-        return val**(1/3)
-      else:
-        return -(abs(val)**(1/3))
+  # Does cube root in python
+  def cube_root(self, val):
+    if val >= 0:
+      return val**(1/3)
+    else:
+      return -(abs(val)**(1/3))
     
   def get_y(self, x):
     # Equation for bezier curve broken up into parts
