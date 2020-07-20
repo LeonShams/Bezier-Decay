@@ -37,17 +37,17 @@ class BezierCurve:
       vertical_shift = 0
       vertical_multiplier = 1
       
-  self.x_0, self.y_0 = start_x, start_y
-  self.x_1, self.y_1 = (x_1*horizontal_multiplier)+horizontal_shift, (y_1*vertical_multiplier)+vertical_shift
-  self.x_2, self.y_2 = (x_2*horizontal_multiplier)+horizontal_shift, (y_2*vertical_multiplier)+vertical_shift
-  self.x_3, self.y_3 = final_x, final_y
-
-  # Does cube root in python
-  def cube_root(self, val):
-    if val >= 0:
-      return val**(1/3)
-    else:
-      return -(abs(val)**(1/3))
+    self.x_0, self.y_0 = start_x, start_y
+    self.x_1, self.y_1 = (x_1*horizontal_multiplier)+horizontal_shift, (y_1*vertical_multiplier)+vertical_shift
+    self.x_2, self.y_2 = (x_2*horizontal_multiplier)+horizontal_shift, (y_2*vertical_multiplier)+vertical_shift
+    self.x_3, self.y_3 = final_x, final_y
+    
+    # Does cube root in python
+    def cube_root(self, val):
+      if val >= 0:
+        return val**(1/3)
+      else:
+        return -(abs(val)**(1/3))
     
   def get_y(self, x):
     # Equation for bezier curve broken up into parts
