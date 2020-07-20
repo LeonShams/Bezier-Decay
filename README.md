@@ -1,7 +1,8 @@
 # Info
 **Bezier-Decay is a package for quickly creating and implementing complex decay curves.** This package can easily be added into any existing code that is using python 3.6 or newer. It very lightweight since it is based on complex mathematical equations rather than loops, but this does result in some domain restrictions so not all curves will work and an error message will appear if a curve will result in a domain error.
 
-<img src="https://drive.google.com/uc?export=view&id=1igcde9VD-YYmiYu-LMTddPEGoad5ke9I" alt="Hi" width=200 height=200>
+Graph of sample curve
+<img src="https://drive.google.com/uc?export=view&id=1igcde9VD-YYmiYu-LMTddPEGoad5ke9I" width=300 height=300>
 
 # Installation
 Copy and paste the following command into the shell
