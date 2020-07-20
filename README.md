@@ -4,7 +4,7 @@
 # Installation
 Copy and paste the following command into the shell
 ```
-pip install --upgrade git+https://github.com/schaall/Bezier-Decay.git
+pip install --upgrade git+https://github.com/LeonShams/Bezier-Decay.git
 ```
 # Usage
 The default initialization of the bezier curve assumes that all inputs will be in the range of 0-1, so the first step is to initialize the decay curve based on how many steps will be taken.
