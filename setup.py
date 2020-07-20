@@ -4,7 +4,6 @@ from setuptools import setup, find_packages
 setup(
   name="bezier_decay", 
   version="0.1.0",
-  author="Leon Shams",
   description="A simple program for creating bezier curves for complex decay.", 
   url='https://github.com/schaall/Bezier-Decay.git',
   author='Leon Shams',
