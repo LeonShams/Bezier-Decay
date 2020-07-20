@@ -20,7 +20,7 @@ Then to confirm that the curve is correct, a graph can be created to visualize i
 decay_curve.graph()
 ```
 
-Then the loop can be created and when given the current step the value at that step will be returned.
+Then loop over the steps and feed them into the decay curve. The decay curve will then return the y value of the curve at that step.
 ```
 for step in range(total_steps+1):
  current_val = decay_curve(step)
