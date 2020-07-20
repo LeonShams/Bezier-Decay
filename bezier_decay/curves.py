@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 default_start_x = 0
 default_start_y = 1
