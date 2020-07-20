@@ -74,3 +74,5 @@ y_3 = 0.001 # Final y
 
 decay_curve = bezier_curve(x_0, y_0, x_1, y_1, x_2, y_2, x_3, y_3, adaptive=False)
 ```
+
+The link to the interactive graph can also be retrieved with `print(bezier_curve())`
