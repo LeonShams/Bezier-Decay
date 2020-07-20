@@ -53,7 +53,7 @@ class BezierCurve:
       raise ValueError('''
       The entered values will result in a domain error. 
       Please change the entered x_1, y_1, x_2, or y_2 values to prevent an error. 
-      These points can be messed around with at https://www.desmos.com/calculator/cd99jvsggg to check for dmoain restrictions.
+      These points can be messed around with at https://www.desmos.com/calculator/m0xo4tt6kl to check for dmoain restrictions.
       This error can be overridden by setting check_domain=False in the curve initialization, but this may result in an error during graphing or while y values are being retrieved.'''
                       )
     
@@ -97,6 +97,6 @@ class BezierCurve:
     plt.show()
 
   def __str__(self):
-    print(f"Follow https://www.desmos.com/calculator/cd99jvsggg to use an interactive graph")
+    print(f"Follow https://www.desmos.com/calculator/m0xo4tt6kl to use an interactive graph")
     
     
