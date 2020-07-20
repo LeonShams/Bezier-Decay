@@ -61,7 +61,7 @@ for step in range(steps+1):
 ```
 <br>
 
-For an interactive curve visit https://www.desmos.com/calculator/cd99jvsggg. Once the desired curve has been created then enter the values on the left side of the screen into the bezier curve.
+For an interactive curve visit https://www.desmos.com/calculator/m0xo4tt6kl. Once the desired curve has been created then enter the values on the left side of the screen into the bezier curve.
 ```
 x_0 = 0 # Staring x
 y_0 = 1 # Staring y
