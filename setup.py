@@ -9,7 +9,7 @@ setup(
   author='Leon Shams',
   license='MIT',
   packages=find_packages(),
-  install_requires=["matplotlib"],
+  install_requires=["matplotlib", "numpy"],
   python_requires='>=3.6',
   entry_points={
         "console_scripts": [
