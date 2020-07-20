@@ -10,7 +10,7 @@ setup(
   author='Leon Shams',
   license='MIT',
   packages=find_packages(),
-  python_requires='>=3.6'
+  python_requires='>=3.6',
   entry_points={
         "console_scripts": [
             "bezier_decay = bezier_decay:bezier_decay",
